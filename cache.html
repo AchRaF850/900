@@ -2,7 +2,7 @@
 <head>
 <title>PSFree-Lapse Exploit For 9.00</title>
 <style>
-body{background: linear-gradient(to bottom right, #063FAB, #01258A);color:white;font-size:28px;text-align:center;margin:0;overflow:hidden;}
+body{background-color: black;color:white;font-size:28px;text-align:center;margin:0;overflow:hidden;}
 .info{position:relative;top:39%;}
 </style>
 <script>
@@ -12,10 +12,22 @@ function DisplayCacheProgress(){
 setTimeout(function(){msgs.innerHTML="Cache Installed Successfully";},2000);
 setTimeout(function(){location.reload();},3000);
 }
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 200px; /* ajuste la taille comme tu veux */
+    filter: drop-shadow(0 0 10px #00ffff);
+	animation: rotateLogo 20s linear infinite;
+}		
+		@keyframes rotateLogo {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}  
 window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 </head>
 <body style=overflow:hidden>
+<img src="logo.png" alt="Logo" class="logo"> <br> 
 <div id=msgs class=info style='-webkit-font-feature-settings:"tnum";font-feature-settings:"tnum";'></div>
 </body>
 </html>
