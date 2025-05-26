@@ -19,25 +19,90 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>PSFree-Lapse Exploit For 9.00</title>
+        <title>AchRaF Exploit For PS4 9.00</title>
         <style>
-            body{background: linear-gradient(to bottom right, #063FAB, #01258A);color:white;font-size:28px;text-align:center;margin:0;overflow:hidden;}
-            .info{position:relative;top:39%;}
-            @font-face {
-                font-family: 'logging';
-                src: url('fonts/LiberationMono-Regular.ttf');
-            }
-            #console {
+            
+           
+			 body {
+            background-color: black; /* arrière-plan noir */
+            color: red; /* texte blanc par défaut */
+            font-family: Arial, sans-serif;
+			text-shadow: 0 0 15px #00ffcc, 0 0 5px #00ffff;
+			font-size: 20px;
+            text-align: center;
+            margin: 0;
+            padding-top: 100px;
+        }
+        .welcome {
+            font-size: 50px;
+            font-weight: bold;
+			text-shadow: 0 0 15px #00ffcc, 0 0 20px #00ffff;
+            animation: rainbow 7s infinite linear;
+            margin-bottom: 30px;
+        }
+		.nousb {
+            font-size: 50px;
+			font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 15px #00ffcc, 0 0 20px red;
+			animation: rainbow 7s infinite linear;
+            margin-bottom: 30px;
+        }
+
+        @keyframes rainbow {
+            0%   { color: red; }
+            10%  { color: orange; }
+            20%  { color: yellow; }
+            30%  { color: lime; }
+            40%  { color: cyan; }
+            50%  { color: blue; }
+            60%  { color: indigo; }
+            70%  { color: violet; }
+            80%  { color: pink; }
+            90%  { color: gold; }
+            100% { color: red; }
+        }
+		.logo {
+    display: block;
+    margin: 20px auto;
+    width: 200px; /* ajuste la taille comme tu veux */
+    filter: drop-shadow(0 0 10px #00ffff);
+	animation: rotateLogo 20s linear infinite;
+}		
+		@keyframes rotateLogo {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+		
+		
+
+        @font-face {
+            font-family: 'logging';
+            src: url('fonts/LiberationMono-Regular.ttf');
+        }
+		
+		#console {
                 font-family: 'logging';
             }
         </style>
+        <script>
+        if (window.applicationCache.status=='0')
+        {
+          window.location.replace("cache.html");
+        }
+        </script>
     </head>
-    <body style="background-image: url('icon0.png'); background-repeat: no-repeat; background-size: 100% 100%; background-position: center; min-height: 100vh;">
-      <script>
-       if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-      </script>
+    <body>
+	<div class="welcome">Welcome to AchRaF31 Host </div>
+	
+	<div class="nousb">NO USB <br> Version 9.00</div>
+	<img src="logo.png" alt="Logo" class="logo"> <br> 
+        AchRaF31 A PS4 Exploit Chain<br>
+		<br>
+        See <a href='./about.html' data-jslicense='1'>JavaScript license information</a> for the
+        source code and license.<br>
         <pre id='console'></pre>
     </body>
-    <script src="payload.js"></script>
+    <script src="./payload.js"></script>
     <script type='module' src='./alert.mjs'></script>
 </html>
