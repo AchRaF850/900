@@ -1,12 +1,11 @@
 CACHE MANIFEST 
 # v2.5.5 Self-Host 
-
 about.html
 alert.mjs
 cache.html
 config.mjs
 COPYING
-icon0.png
+logo.png
 index.html
 lapse.mjs
 LICENSE
